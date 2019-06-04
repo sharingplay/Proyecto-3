@@ -1,0 +1,21 @@
+<sistema>
+ <Galeria nombre="familia">
+  <imagen dir="/doc/nose">
+   <nombre>
+    <Graduacion/>
+   </nombre>
+   <Autor>
+    <Mariana/>
+   </Autor>
+   <Creacion>
+    <2017/>
+   </Creacion>
+   <Tamano>
+    <16x16/>
+   </Tamano>
+   <Descripcion>
+    <baile de graduacion/>
+   </Descripcion>
+  </imagen>
+ </Galeria>
+</sistema>
