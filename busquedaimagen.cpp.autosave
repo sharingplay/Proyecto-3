@@ -33,7 +33,7 @@ void busquedaImagen::on_botonBusqueda_clicked()
 {
    QString infoImagenBuscar = ui->searchEdit->text();
    QString* arrayPalabras = construirArray(infoImagenBuscar);
-   qDebug()<< &arrayPalabras[1];
+   qDebug()<< arrayPalabras[1];
    //llamar funcion que crea la lista
 
 

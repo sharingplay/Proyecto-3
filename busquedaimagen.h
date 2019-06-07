@@ -3,6 +3,7 @@
 
 #include <QDialog>
 #include "QDebug"
+#include "fotografia.h"
 
 namespace Ui {
 class busquedaImagen;
@@ -15,6 +16,9 @@ class busquedaImagen : public QDialog
 public:
     explicit busquedaImagen(QWidget *parent = nullptr);
     ~busquedaImagen();
+    void detectarPalabras();
+    QString* construirArray(QString listaCrear);
+
 
 private slots:
     void on_botonBusqueda_clicked();
