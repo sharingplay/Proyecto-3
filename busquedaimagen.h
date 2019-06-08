@@ -4,7 +4,7 @@
 #include <QDialog>
 #include "QDebug"
 #include "fotografia.h"
-
+#include "galerias.h"
 namespace Ui {
 class busquedaImagen;
 }
@@ -17,7 +17,8 @@ public:
     explicit busquedaImagen(QWidget *parent = nullptr);
     ~busquedaImagen();
     void detectarPalabras();
-    QString* construirArray(QString listaCrear);
+    void construirArray(QString listaCrear);
+    QString* crearArrayPalabras(QString oracion);
 
 
 private slots:
