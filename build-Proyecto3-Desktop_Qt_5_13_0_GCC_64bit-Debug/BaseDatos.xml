@@ -1,21 +1,6 @@
 <sistema>
  <Galeria nombre="familia">
-  <imagen dir="/doc/nose">
-   <nombre>
-    <Graduacion/>
-   </nombre>
-   <Autor>
-    <Mariana/>
-   </Autor>
-   <Creacion>
-    <2017/>
-   </Creacion>
-   <Tamano>
-    <16x16/>
-   </Tamano>
-   <Descripcion>
-    <baile de graduacion/>
-   </Descripcion>
-  </imagen>
+  <imagen base64="/doc/nose" Tamano="15x5" Creacion="1989" Descripcion="MarioIdiota" nombre="Pablo" Autor="Julian"/>
  </Galeria>
+ <Galeria nombre="personaje"/>
 </sistema>

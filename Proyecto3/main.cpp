@@ -5,8 +5,9 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
     XML* prueba= new XML();
-    //prueba->readXML();
     prueba->writeXML("prueba");
+    prueba->readXML();
+    prueba->newGallery("prueba");
     cout<<"here main"<<endl;
     MainWindow w;
     w.show();
