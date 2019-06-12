@@ -45,9 +45,11 @@ void MainWindow::on_addButton_clicked()
 
 void MainWindow::on_searchButton_clicked()
 {
+
     busquedaImagen ventanaBusqueda;
     ventanaBusqueda.setModal(true);
     ventanaBusqueda.exec();
+
 }
 
 void MainWindow::on_infoButton_clicked()

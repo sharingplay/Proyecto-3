@@ -18,7 +18,8 @@ public:
     ~busquedaImagen();
     void detectarPalabras();
     void construirArray(QString listaCrear);
-    QString* crearArrayPalabras(QString oracion);
+    string* pruebaArray(QString hablada);
+    string* crearArrayPalabras(QString oracion);
 
 
 private slots:

@@ -1,5 +1,7 @@
 #include "busquedaimagen.h"
 #include "ui_busquedaimagen.h"
+#include "iostream"
+using namespace std;
 
 busquedaImagen::busquedaImagen(QWidget *parent) :
     QDialog(parent),
@@ -42,7 +44,7 @@ void busquedaImagen::construirArray(QString listaCrear)
             galerias::getInstance().metadataBuscar = "ano";
         }
         else {
-            qDebug()<<"El tipo de metadata que desea ver no existe";
+            qDebug()<<"El tipo de metadata "<< arrayPalabras[0]<< " no existe";
         }
 
         //Galeria en la que se desea buscar
@@ -56,6 +58,11 @@ void busquedaImagen::construirArray(QString listaCrear)
                 }
             }
         }
+
+        else{
+            qDebug()<<"No se ingreso la palabra from";
+        }
+
 
         if(arrayPalabras[4] == "where"){
             if(arrayPalabras[5]=="nombre"){
@@ -143,24 +150,57 @@ void busquedaImagen::construirArray(QString listaCrear)
     }
 }
 
-QString* busquedaImagen::crearArrayPalabras(QString oracion)
+string* busquedaImagen::pruebaArray(QString hablada)
+{
+    QStringList listaSeparada = hablada.split(" ");
+    int i = 0;
+    int tamano = listaSeparada.count();
+    string arrayString[tamano];
+
+    foreach(QString palabra, listaSeparada){
+        string palabraSTR = palabra.toStdString();
+        arrayString[i] = palabraSTR;
+//        cout<<"Palabra en string ---> "<<arrayString[i]<<endl;
+
+//        qDebug()<<i;
+        i++;
+    }
+    return arrayString;
+}
+//ARREGLAR ESTA FUNCION.........................................................................................................................................................
+string* busquedaImagen::crearArrayPalabras(QString oracion)
 {
     QStringList infoSeparada = oracion.split(" ");
     int i = 0;
-    QString* resultado = (QString*)malloc(infoSeparada.count() * sizeof(int));
+    QString* resultado[infoSeparada.count()];
+    string* resultadoSTR;
 
     foreach(QString palabra, infoSeparada){
-        resultado[i] = palabra;
+        resultado[i] = &palabra;
         qDebug()<<i;
-        qDebug()<<resultado[i];
+        qDebug()<<*resultado[i];
         i++;
     }
-    return resultado;
+    i = 0;
+    qDebug()<<"*******************************";
+    for (i;i<infoSeparada.count();i++) {
+        resultadoSTR[i] = resultado[i]->toStdString();
+    }
+    return resultadoSTR;
 }
 
 void busquedaImagen::on_botonBusqueda_clicked()
 {
-    QString infoImagenBuscar = ui->searchEdit->text();
-    crearArrayPalabras(infoImagenBuscar);
+    QString palabra = ui->searchEdit->text();
+    string *arraySTR = pruebaArray(palabra);
+    for (int i = 0; i<arraySTR->size();i++) {
+        cout<<arraySTR[i]<<endl;
+    }
+//    QString infoImagenBuscar = ui->searchEdit->text();
+//    string *arrayPrueba = crearArrayPalabras(infoImagenBuscar);
+//    qDebug()<<"*********************************************";
+//    for (int i = 0; i < 5;i++) {
+//        cout<<arrayPrueba[i]<<endl;
+//    }
 }
 
