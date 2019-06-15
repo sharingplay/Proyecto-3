@@ -13,12 +13,15 @@ public:
     galerias();
     LinkedList *listaGalerias = new LinkedList();
     fotografia* fotoGlobal = new fotografia();
-    fotografia* fotoBuscar = new fotografia();
-    fotografia* fotoEliminar = new fotografia();
+    QString arrayBuscar[4];
+    QString arrayBorrar[4];
+    QString arrayUpdate[4];
+
     galeria* galeriaBuscar = new galeria();
     galeria* galeriaEliminar = new galeria();
     QString metadataBuscar = "";
     QString metadataEliminar = "";
+    QString metadataActualizar = "";
     void imprimirInfoGalerias();
 };
 

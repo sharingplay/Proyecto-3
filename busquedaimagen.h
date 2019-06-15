@@ -16,10 +16,8 @@ class busquedaImagen : public QDialog
 public:
     explicit busquedaImagen(QWidget *parent = nullptr);
     ~busquedaImagen();
-    void detectarPalabras();
-    void construirArray(QString listaCrear);
-    QString* pruebaArray(QString hablada);
-    string* crearArrayPalabras(QString oracion);
+    QString* crearArray(QString oracion);
+    void detectarPlabras(QString* arrayOracion);
 
 
 private slots:
