@@ -39,7 +39,11 @@ void busquedaImagen::construirArray(QString listaCrear)
         }
         else if(arrayPalabras[1]=="descripcion"){
             galerias::getInstance().metadataBuscar = "descripcion";
-        }
+        }//    string *arrayPrueba = crearArrayPalabras(infoImagenBuscar);
+        //    qDebug()<<"*********************************************";
+        //    for (int i = 0; i < 5;i++) {
+        //        cout<<arrayPrueba[i]<<endl;
+        //    }
         else if(arrayPalabras[1]=="ano"){
             galerias::getInstance().metadataBuscar = "ano";
         }
@@ -189,23 +193,11 @@ void busquedaImagen::on_botonBusqueda_clicked()
 {
     QString palabra = ui->searchEdit->text();
     QString *arraySTR = pruebaArray(palabra);
-//    QString tamano = *(arraySTR);
-//    QString arr[tamano.toInt()];
-//    for(int i = 0; i<tamano+1; i++){
-//        arr[i]=*(arraySTR+(i+1));
-//    }
 
     for (int i = 0; i<=(arraySTR[0].toInt());i++) {
         cout<<i<<" numero" <<(arraySTR[0].toInt())<<endl;
         qDebug()<<arraySTR[i];
     }
-
-
-//    QString infoImagenBuscar = ui->searchEdit->text();
-//    string *arrayPrueba = crearArrayPalabras(infoImagenBuscar);
-//    qDebug()<<"*********************************************";
-//    for (int i = 0; i < 5;i++) {
-//        cout<<arrayPrueba[i]<<endl;
-//    }
+    
 }
 

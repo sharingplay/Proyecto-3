@@ -18,7 +18,7 @@ public:
     ~busquedaImagen();
     void detectarPalabras();
     void construirArray(QString listaCrear);
-    string* pruebaArray(QString hablada);
+    QString* pruebaArray(QString hablada);
     string* crearArrayPalabras(QString oracion);
 
 
