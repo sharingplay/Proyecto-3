@@ -25,6 +25,9 @@ public:
     void setAno(QString &value);
     QImage getImagen() const;
     void setImagen(QImage value);
+    //!
+    //! \brief imprimirDatosImagen imprime en consola los datos de la imagen
+    //!
     void imprimirDatosImagen();
     int getTamano() const;
     void setTamano(int value);

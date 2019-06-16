@@ -14,9 +14,20 @@ private:
     int cantidadFotos = 0;
 public:
     galeria();
+    //!
+    //! \brief listaFotos lista de fotos que estan en esta galeria
+    //!
     LinkedList* listaFotos = new LinkedList();
     int getCantidadFotos() const;
+    //!
+    //! \brief agregarImagen agrega una imagen a la galeria
+    //! \param foto fotografia que se desea agregar
+    //!
     void agregarImagen(fotografia* foto);
+    //!
+    //! \brief eliminarImagen elimina una imagen de la galeria
+    //! \param foto fotografia que se desea eliminar de la galeria
+    //!
     void eliminarImagen(Node* foto);
     QString getNombre() const;
     void setNombre(const QString &value);

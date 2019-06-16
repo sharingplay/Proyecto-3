@@ -19,8 +19,13 @@ public:
     ~createGalery();
 
 private slots:
+    //!
+    //! \brief on_botonCrear_clicked verifica si la galeria que se desea crear no existe, de ser asi la crea y se la asigna a la imagen ingresada
+    //!
     void on_botonCrear_clicked();
-
+    //!
+    //! \brief on_botonGuardar_clicked asigna la imagen ingresada a una galeria existente
+    //!
     void on_botonGuardar_clicked();
 
 private:
