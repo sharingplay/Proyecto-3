@@ -99,10 +99,10 @@ void borrarImagen::detectarPlabrasDelete(QString *arrayOracion)
         else {
             qDebug()<<"No se especifico con el comando where que metadata se desea borrar";
         }
-        cout<<"Dato buscar -->"<<galerias::getInstance().arrayBuscar[0].toStdString()<<endl;
-        cout<<" Galeria -->"<<galerias::getInstance().arrayBuscar[1].toStdString()<<endl;
-        cout<<" Dato comparar -->"<<galerias::getInstance().arrayBuscar[2].toStdString()<<endl;
-        cout<<" valor dato -->"<<galerias::getInstance().arrayBuscar[3].toStdString()<<endl;
+        cout<<"Dato buscar -->"<<galerias::getInstance().arrayBorrar[0].toStdString()<<endl;
+        cout<<" Galeria -->"<<galerias::getInstance().arrayBorrar[1].toStdString()<<endl;
+        cout<<" Dato comparar -->"<<galerias::getInstance().arrayBorrar[2].toStdString()<<endl;
+        cout<<" valor dato -->"<<galerias::getInstance().arrayBorrar[3].toStdString()<<endl;
     }
 }
 
