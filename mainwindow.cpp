@@ -52,7 +52,23 @@ void MainWindow::on_searchButton_clicked()
 
 }
 
+void MainWindow::on_updateButton_clicked()
+{
+    updateImagen ventanaUpdate;
+    ventanaUpdate.setModal(true);
+    ventanaUpdate.exec();
+}
+
+void MainWindow::on_deleteButton_clicked()
+{
+    borrarImagen ventanaBorrar;
+    ventanaBorrar.setModal(true);
+    ventanaBorrar.exec();
+}
+
 void MainWindow::on_infoButton_clicked()
 {
      galerias::getInstance().imprimirInfoGalerias();
 }
+
+

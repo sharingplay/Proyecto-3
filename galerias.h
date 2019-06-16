@@ -17,11 +17,6 @@ public:
     QString arrayBorrar[4];
     QString arrayUpdate[4];
 
-    galeria* galeriaBuscar = new galeria();
-    galeria* galeriaEliminar = new galeria();
-    QString metadataBuscar = "";
-    QString metadataEliminar = "";
-    QString metadataActualizar = "";
     void imprimirInfoGalerias();
 };
 

@@ -38,8 +38,8 @@
    <widget class="QPushButton" name="addButton">
     <property name="geometry">
      <rect>
-      <x>160</x>
-      <y>20</y>
+      <x>40</x>
+      <y>40</y>
       <width>91</width>
       <height>91</height>
      </rect>
@@ -54,8 +54,8 @@
    <widget class="QPushButton" name="searchButton">
     <property name="geometry">
      <rect>
-      <x>330</x>
-      <y>30</y>
+      <x>190</x>
+      <y>40</y>
       <width>91</width>
       <height>81</height>
      </rect>
@@ -86,14 +86,46 @@
    <widget class="QPushButton" name="infoButton">
     <property name="geometry">
      <rect>
-      <x>510</x>
-      <y>30</y>
+      <x>670</x>
+      <y>50</y>
       <width>81</width>
       <height>71</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">border-image: url(:/infoButton.png);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="updateButton">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>50</y>
+      <width>91</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/updateImage.png);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="deleteButton">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>40</y>
+      <width>71</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/deleteImage.png);</string>
     </property>
     <property name="text">
      <string/>

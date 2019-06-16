@@ -8,6 +8,8 @@
 #include "ingresometadata.h"
 #include "galerias.h"
 #include "busquedaimagen.h"
+#include "updateimagen.h"
+#include "borrarimagen.h"
 
 namespace Ui {
 class MainWindow;
@@ -29,6 +31,10 @@ private slots:
     void on_searchButton_clicked();
 
     void on_infoButton_clicked();
+
+    void on_updateButton_clicked();
+
+    void on_deleteButton_clicked();
 
 private:
     Ui::MainWindow *ui;
