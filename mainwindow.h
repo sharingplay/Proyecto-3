@@ -10,6 +10,7 @@
 #include "busquedaimagen.h"
 #include "updateimagen.h"
 #include "borrarimagen.h"
+#include "seleccionfotos.h"
 
 namespace Ui {
 class MainWindow;

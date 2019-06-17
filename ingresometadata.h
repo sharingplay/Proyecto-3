@@ -18,7 +18,7 @@ class ingresoMetadata : public QDialog
 public:
     explicit ingresoMetadata(QWidget *parent = nullptr);
     ~ingresoMetadata();
-    static fotografia* fotoNueva;
+    //static fotografia* fotoNueva;
 
 private slots:
 

@@ -68,7 +68,11 @@ void MainWindow::on_deleteButton_clicked()
 
 void MainWindow::on_infoButton_clicked()
 {
-     galerias::getInstance().imprimirInfoGalerias();
+    seleccionFotos ventanaTabla;
+    ventanaTabla.setModal(true);
+    ventanaTabla.exec();
+//     galerias::getInstance().imprimirInfoGalerias();
 }
+
 
 
