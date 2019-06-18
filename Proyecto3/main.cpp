@@ -15,8 +15,8 @@ int main(int argc, char *argv[])
 //    prueba->eliminar("68597");
 //    prueba->eliminar("96597");
 //    prueba->eliminar("684897");
-    cout<<prueba->buscarDescripcion("holaaaa")<<endl;
-    cout<<"here main"<<endl;
+//    cout<<prueba->buscarDescripcion("holaaaa")<<endl;
+//    cout<<"here main"<<endl;
     MainWindow w;
     w.show();
     return a.exec();
