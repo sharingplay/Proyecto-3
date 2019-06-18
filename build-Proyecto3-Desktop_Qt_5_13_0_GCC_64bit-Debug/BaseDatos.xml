@@ -1,14 +1,1 @@
-<sistema>
- <Galeria nombre="prueba">
-  <imagen autor="pablo" descripcion="holaaaa" creacion="1985" base64="685787" nombre="rosa" tamano="15x15"/>
- </Galeria>
-</sistema>
- descripcion="holaaaa" creacion="1985" base64="684897" nombre="rosa" tamano="15x15"/>
- </Galeria>
-</sistema>
-descripcion="holaaaa" creacion="1985" base64="684897" nombre="rosa" tamano="15x15"/>
- </Galeria>
-</sistema>
-descripcion="holaaaa" creacion="1985" base64="684897" nombre="rosa" tamano="15x15"/>
- </Galeria>
-</sistema>
+<sistema/>
