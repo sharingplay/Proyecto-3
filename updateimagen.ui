@@ -23,7 +23,7 @@
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">border-image: url(:/updateImage.png);</string>
+    <string notr="true">border-image: url(:/imagenes/updateImage.png);</string>
    </property>
    <property name="text">
     <string/>

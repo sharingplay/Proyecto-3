@@ -36,7 +36,7 @@ void socks::enviar(string mensaje, int puerto, string ip)
         serv_addr.sin_port = htons(puerto);
 
         // Convert IPv4 and IPv6 addresses from text to binary form
-        if(inet_pton(AF_INET, ip.c_str(), &serv_addr.sin_addr)<=0)
+        if(inet_pton(AF_INET, "192.168.0.111", &serv_addr.sin_addr)<=0)
         {
             printf("\nInvalid address/ Address not supported \n");
         }
@@ -69,7 +69,7 @@ void socks::enviar_imagen(QImage imagen){
     server.sin_port = htons( 8889 );
 
     //Connect to remote server
-    if(inet_pton(AF_INET, "192.168.0.111", &server.sin_addr)<=0)
+    if(inet_pton(AF_INET, "192.168.0.110", &server.sin_addr)<=0)
     {
         printf("\nInvalid address/ Address not supported \n");
     }

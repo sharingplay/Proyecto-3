@@ -5,6 +5,7 @@
 #-------------------------------------------------
 
 QT       += core gui
+QT += xml
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -39,6 +40,7 @@ SOURCES += \
     updateimagen.cpp \
     seleccionfotos.cpp \
     socks.cpp \
+    xml.cpp\
     serializador.cpp
 
 HEADERS += \
@@ -55,6 +57,8 @@ HEADERS += \
     updateimagen.h \
     seleccionfotos.h \
     socks.h \
+    xml.h\
+    raid.h\
     serializador.h
 
 FORMS += \
@@ -72,6 +76,6 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 RESOURCES += \
-    ../imagenes/imagenes.qrc
+    imagenes.qrc
 
 DISTFILES +=

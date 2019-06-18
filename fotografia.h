@@ -9,8 +9,8 @@ using namespace std;
 class fotografia
 {
 private:
-    QString Nombre,autor,descripcion,ano,nombreGaleria;
-    int tamano;
+    QString Nombre,autor,descripcion,ano,nombreGaleria,tamano;
+
     QImage imagen;
 
 public:
@@ -29,8 +29,8 @@ public:
     //! \brief imprimirDatosImagen imprime en consola los datos de la imagen
     //!
     void imprimirDatosImagen();
-    int getTamano() const;
-    void setTamano(int value);
+    QString getTamano() const;
+    void setTamano(QString value);
     QString getNombreGaleria() const;
     void setNombreGaleria(const QString &value);
 };

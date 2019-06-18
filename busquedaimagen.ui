@@ -33,7 +33,7 @@
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">border-image: url(:/search.png);</string>
+    <string notr="true">border-image: url(:/imagenes/search.png);</string>
    </property>
    <property name="text">
     <string/>

@@ -45,7 +45,7 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">border-image: url(:/addImage.png);</string>
+     <string notr="true">border-image: url(:/imagenes/addImage.png);</string>
     </property>
     <property name="text">
      <string/>
@@ -61,7 +61,7 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">border-image: url(:/search.png);</string>
+     <string notr="true">border-image: url(:/imagenes/search.png);</string>
     </property>
     <property name="text">
      <string/>
@@ -93,7 +93,7 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">border-image: url(:/infoButton.png);</string>
+     <string notr="true">border-image: url(:/imagenes/infoButton.png);</string>
     </property>
     <property name="text">
      <string/>
@@ -109,7 +109,7 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">border-image: url(:/updateImage.png);</string>
+     <string notr="true">border-image: url(:/imagenes/updateImage.png);</string>
     </property>
     <property name="text">
      <string/>
@@ -125,7 +125,7 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">border-image: url(:/deleteImage.png);</string>
+     <string notr="true">border-image: url(:/imagenes/deleteImage.png);</string>
     </property>
     <property name="text">
      <string/>

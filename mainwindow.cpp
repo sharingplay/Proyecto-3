@@ -27,8 +27,8 @@ void MainWindow::on_addButton_clicked()
         if(valid){
             image = image.scaledToWidth(ui->label_imagen->width(), Qt::SmoothTransformation);
             ui->label_imagen->setPixmap(QPixmap::fromImage(image));
-
-            galerias::getInstance().fotoGlobal->setTamano(image.sizeInBytes());
+            QString tamanoImagen = QString::number(image.sizeInBytes());
+            galerias::getInstance().fotoGlobal->setTamano(tamanoImagen);
             galerias::getInstance().fotoGlobal->setImagen(image);
             image = imagenNueva;
             //llama al ingreso de metadata

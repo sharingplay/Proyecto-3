@@ -1,2 +1,12 @@
-<!DOCTYPE RCC>
-<RCC version="1.0"/>
+<RCC>
+    <qresource prefix="/imagen"/>
+    <qresource prefix="/">
+        <file>../imagenes/addImage.png</file>
+        <file>../imagenes/deleteImage.png</file>
+        <file>../imagenes/infoButton.png</file>
+        <file>../imagenes/search.png</file>
+        <file>../imagenes/titulos.png</file>
+        <file>../imagenes/updateImage.png</file>
+        <file>../imagenes/whatDoYouWant.jpg</file>
+    </qresource>
+</RCC>

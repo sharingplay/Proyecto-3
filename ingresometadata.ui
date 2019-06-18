@@ -40,7 +40,7 @@ p, li { white-space: pre-wrap; }
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">border-image: url(:/titulos.png);</string>
+    <string notr="true">border-image: url(:/imagenes/titulos.png);</string>
    </property>
    <property name="text">
     <string/>

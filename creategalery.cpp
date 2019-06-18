@@ -1,5 +1,10 @@
 #include "creategalery.h"
 #include "ui_creategalery.h"
+#include "serializador.h"
+#include "socks.h"
+#include "xml.h"
+#include "raid.h"
+using namespace std;
 
 createGalery::createGalery(QWidget *parent) :
     QDialog(parent),
@@ -37,8 +42,10 @@ void createGalery::on_botonCrear_clicked()
             nuevaGaleria->agregarImagen(fotoAgregar);
             fotoAgregar->setNombreGaleria(nombreGaleria);
             galerias::getInstance().fotoGlobal = fotoAgregar;
-
-            galerias::getInstance().listaGalerias->Add(nuevaGaleria);
+            XML::getInstance().agregarImagen(fotoAgregar->getNombreGaleria().toStdString(),fotoAgregar->getNombre().toStdString(),fotoAgregar->getNombre().toStdString(),fotoAgregar->getAutor().toStdString(),fotoAgregar->getAno().toStdString(),fotoAgregar->getTamano().toStdString(),fotoAgregar->getDescripcion().toStdString());
+            fotoAgregar->getImagen().save(fotoAgregar->getNombre(),"PNG");
+            string str = fotoAgregar->getNombre().toStdString();
+            RAID::getInstance().write(str.c_str(),str.c_str());
             qDebug()<<"Se creo la galeria "<<nombreGaleria<<" y se agrego la foto"<<fotoAgregar->getNombre();
             close();
         }
@@ -50,8 +57,13 @@ void createGalery::on_botonCrear_clicked()
         nuevaGaleria->agregarImagen(fotoAgregar);
         fotoAgregar->setNombreGaleria(nombreGaleria);
         galerias::getInstance().fotoGlobal = fotoAgregar;
+        XML::getInstance().agregarImagen(fotoAgregar->getNombreGaleria().toStdString(),fotoAgregar->getNombre().toStdString(),fotoAgregar->getNombre().toStdString(),fotoAgregar->getAutor().toStdString(),fotoAgregar->getAno().toStdString(),fotoAgregar->getTamano().toStdString(),fotoAgregar->getDescripcion().toStdString());
+        fotoAgregar->getImagen().save(fotoAgregar->getNombre(),"PNG");
+        string str = fotoAgregar->getNombre().toStdString();
+        RAID::getInstance().write(str.c_str(),str.c_str());
         qDebug()<<"Se creo la galeria "<<nombreGaleria<<" ya que no existia ninguna"<<" y se agrego la foto"<<fotoAgregar->getNombre();
         galerias::getInstance().listaGalerias->Add(nuevaGaleria);
+
         close();
 
 

@@ -63,12 +63,12 @@ void fotografia::imprimirDatosImagen()
     qDebug()<<"Imagen "<<this->imagen;
 }
 
-int fotografia::getTamano() const
+QString fotografia::getTamano() const
 {
     return tamano;
 }
 
-void fotografia::setTamano(int value)
+void fotografia::setTamano(QString value)
 {
     tamano = value;
 }
