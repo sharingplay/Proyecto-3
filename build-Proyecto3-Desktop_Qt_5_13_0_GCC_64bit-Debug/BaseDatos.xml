@@ -1,6 +1,14 @@
 <sistema>
- <Galeria nombre="familia">
-  <imagen base64="/doc/nose" Tamano="15x5" Creacion="1989" Descripcion="MarioIdiota" nombre="Pablo" Autor="Julian"/>
+ <Galeria nombre="prueba">
+  <imagen autor="pablo" descripcion="holaaaa" creacion="1985" base64="685787" nombre="rosa" tamano="15x15"/>
  </Galeria>
- <Galeria nombre="personaje"/>
+</sistema>
+ descripcion="holaaaa" creacion="1985" base64="684897" nombre="rosa" tamano="15x15"/>
+ </Galeria>
+</sistema>
+descripcion="holaaaa" creacion="1985" base64="684897" nombre="rosa" tamano="15x15"/>
+ </Galeria>
+</sistema>
+descripcion="holaaaa" creacion="1985" base64="684897" nombre="rosa" tamano="15x15"/>
+ </Galeria>
 </sistema>

@@ -118,7 +118,7 @@ void update(string cambio, string caracteristica,string lugar, string atributo){
             while(!child.isNull()){
                 string base64Guardada= child.toElement().attribute("base64").toStdString().c_str();
                 if(base64Guardada==atributo){
-                    //actualizar
+                    child.setAttribute("base64", QString::fromStdString(base64));
                     std::cout << "actualizada" << base64Guardada << std::endl;
                     if(!file.open(QIODevice::ReadWrite | QIODevice::Text)){
                         QMessageBox::critical(nullptr,"Error",file.errorString());
