@@ -24,10 +24,11 @@ public:
     socks();
     void enviar_imagen(QImage imagen);
     int send_image(int socket, QImage image);
-    int receive_image(int socket);
+    int receive_image(int socket, string nombre);
     void enviar(string mensaje, int puerto, string ip);
-    string escuchaEnviaImagen(int puerto, QImage mensaje);
+    string escuchaEnviaImagen(int puerto, QString path);
     string escuchaEnvia(int puerto, string mensaje);
+    string recibirImagen(int puerto, string nombre);
 };
 
 #endif // SOCKS_H

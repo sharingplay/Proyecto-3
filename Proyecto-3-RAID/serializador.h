@@ -9,10 +9,13 @@ using namespace rapidjson;
 class serializador
 {
 public:
+    static serializador & getInstance(){
+        static serializador instance;
+        return instance;
+    }
     serializador();
     string serializar_meta(QString nombre, QString autor, QString creacion, QString ano, QString tamano, string foto_b64);
-    void deserializarMetadata(string json, string *metadata);
-    string serializarString(string str);
+    void deserializarInfo(string json, int *id, string *nombre);
 };
 
 #endif // SERIALIZADOR_H

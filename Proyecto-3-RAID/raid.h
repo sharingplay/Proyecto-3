@@ -13,7 +13,10 @@ class RAID {
 
 
 public:
-
+    static RAID & getInstance(){
+        static RAID instance;
+        return instance;
+    }
 static void createDisks(){
     for(int i=1; i<5; i++){
        string diskname = "Disk Number"+to_string(i);
@@ -158,7 +161,7 @@ static pair<int, char*> read(char *chunkName) {
  * @param imagePath ruta de la imagen que se quiere almacenar
  * @param chunkName nombre del archivo con el que se almacenara
  */
-static void write(char *imagePath, char *chunkName) {
+static void write(const char *imagePath, const char *chunkName) {
     string disksPath = "/home/wajo/Documentos/TEC/Datos II/Proyecto 3/Proyecto-3/Proyecto-3-RAID/build-RAID5-Desktop-Debug/";
     ifstream fileStream;
     fileStream.open(imagePath, ios::in | ios::binary);
@@ -225,7 +228,7 @@ static void write(char *imagePath, char *chunkName) {
  *
  * @param chunkName
  */
-static void seek(char *chunkName) {    
+static void seek(char *chunkName) {
     string disksPath = "/home/wajo/Documentos/TEC/Datos II/Proyecto 3/Proyecto-3/Proyecto-3-RAID/build-RAID5-Desktop-Debug/";
     string fileName;
     bool filefound = true;
