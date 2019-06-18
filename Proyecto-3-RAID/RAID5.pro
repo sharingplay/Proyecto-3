@@ -25,11 +25,15 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         main.cpp \
-        mainwindow.cpp
+        mainwindow.cpp \
+    socks.cpp \
+    serializador.cpp
 
 HEADERS += \
         mainwindow.h \
-    raid.h
+    raid.h \
+    socks.h \
+    serializador.h
 
 FORMS += \
         mainwindow.ui

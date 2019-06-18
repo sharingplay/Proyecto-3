@@ -10,8 +10,8 @@
 using namespace std;
 
 int main(int argc, char *argv[]){
-    RAID a;
-    a.createDisks();
+    //RAID a;
+    RAID::getInstance().createDisks();
     while (true){
         socks::getInstance().escuchaEnvia(8080,"");
     }
