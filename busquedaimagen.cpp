@@ -41,6 +41,9 @@ void busquedaImagen::detectarPlabrasSelect(QString* arrayOracion)
         else if(arrayPalabras[1]=="ano"){
             galerias::getInstance().arrayBuscar[0] = "ano";
         }
+        else if (arrayPalabras[1] == "tamano") {
+            galerias::getInstance().arrayBuscar[0] = "tamano";
+        }
         else if(arrayPalabras[1]=="*") {
              galerias::getInstance().arrayBuscar[0] = "todo";
         }
@@ -69,6 +72,11 @@ void busquedaImagen::detectarPlabrasSelect(QString* arrayOracion)
             else if(arrayPalabras[5]=="autor"){
                 galerias::getInstance().arrayBuscar[2] = "autor";
                 galerias::getInstance().arrayBuscar[3] = arrayPalabras[7];
+            }
+            else if(arrayPalabras[5] == "tamano"){
+                galerias::getInstance().arrayBuscar[2] = "tamano";
+                galerias::getInstance().arrayBuscar[3] = arrayPalabras[7];
+
             }
             else if(arrayPalabras[5]=="descripcion"){
                 galerias::getInstance().arrayBuscar[2] = "descripcion";

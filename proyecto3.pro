@@ -36,7 +36,8 @@ SOURCES += \
     fotografia.cpp \
     busquedaimagen.cpp \
     borrarimagen.cpp \
-    updateimagen.cpp
+    updateimagen.cpp \
+    seleccionfotos.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -49,7 +50,8 @@ HEADERS += \
     ingresometadata.h \
     busquedaimagen.h \
     borrarimagen.h \
-    updateimagen.h
+    updateimagen.h \
+    seleccionfotos.h
 
 FORMS += \
         mainwindow.ui \
@@ -57,7 +59,8 @@ FORMS += \
     ingresometadata.ui \
     busquedaimagen.ui \
     borrarimagen.ui \
-    updateimagen.ui
+    updateimagen.ui \
+    seleccionfotos.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

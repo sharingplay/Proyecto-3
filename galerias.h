@@ -16,7 +16,7 @@ public:
     QString arrayBuscar[4]; //datos de la imagen que se desea buscar
     QString arrayBorrar[4]; //datos de la imagen que se desea borrar
     QString arrayUpdate[4]; //datos de la imagen que se desea actualizar
-    QString arrayPrueba[5][5];
+    QString arrayPrueba[5][6];
 
 
     void imprimirInfoGalerias();

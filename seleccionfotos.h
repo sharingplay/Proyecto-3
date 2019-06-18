@@ -18,6 +18,7 @@ public:
 
 private slots:
     void on_verButton_clicked();
+    void clickBotonTabla();
 
 private:
     Ui::seleccionFotos *ui;

@@ -23,7 +23,6 @@ void MainWindow::on_addButton_clicked()
         QImage image;
         QImage imagenNueva;
         bool valid = image.load(imagen);
-        qDebug()<<imagen;
         if(valid){
             image = image.scaledToWidth(ui->label_imagen->width(), Qt::SmoothTransformation);
             ui->label_imagen->setPixmap(QPixmap::fromImage(image));
