@@ -50,7 +50,7 @@ void MainWindow::on_searchButton_clicked()
     busquedaImagen ventanaBusqueda;
     ventanaBusqueda.setModal(true);
     ventanaBusqueda.exec();
-    galerias::getInstance().arrayBuscar[4] = 1;
+
 }
 
 void MainWindow::on_updateButton_clicked()
@@ -58,7 +58,6 @@ void MainWindow::on_updateButton_clicked()
     updateImagen ventanaUpdate;
     ventanaUpdate.setModal(true);
     ventanaUpdate.exec();
-    galerias::getInstance().arrayUpdate[4] = 3;
 }
 
 void MainWindow::on_deleteButton_clicked()
@@ -66,25 +65,14 @@ void MainWindow::on_deleteButton_clicked()
     borrarImagen ventanaBorrar;
     ventanaBorrar.setModal(true);
     ventanaBorrar.exec();
-    galerias::getInstance().arrayBorrar[4] = 2;
 }
 
 void MainWindow::on_infoButton_clicked()
 {
-    string palabraPrueba;
-    palabraPrueba = "asd134s1341,paisaje,PAISAJES,Jesus,1999,paisaje con lago.";//base64,nombre,autor,ano,tamano,descripcion
-    QString* prueba = galerias::getInstance().leerArray(palabraPrueba);
-    for (int i = 0 ; i < 6;i++) {
-        qDebug()<<prueba[i];
-
-    }
-
-    //    for (int i = 0; i < prueba->size();i++) {
-    //        qDebug()<< prueba[i];
-    //    }
-    //    seleccionFotos ventanaTabla;
-    //    ventanaTabla.setModal(true);
-    //    ventanaTabla.exec();
+    seleccionFotos ventanaTabla;
+    ventanaTabla.setModal(true);
+    ventanaTabla.exec();
+//     galerias::getInstance().imprimirInfoGalerias();
 }
 
 

@@ -73,16 +73,6 @@ void fotografia::setTamano(int value)
     tamano = value;
 }
 
-QString fotografia::getNombreGaleria() const
-{
-    return nombreGaleria;
-}
-
-void fotografia::setNombreGaleria(const QString &value)
-{
-    nombreGaleria = value;
-}
-
 fotografia::fotografia()
 {
     
