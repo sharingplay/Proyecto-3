@@ -24,12 +24,13 @@ seleccionFotos::~seleccionFotos()
 
 void seleccionFotos::on_verButton_clicked()
 {
+
     for(int i = 0; i <= 2; i++){
-    QPushButton* botonImagen = new QPushButton();
-    botonImagen->setParent(ui->tableWidget);
+    QPushButton* botonImagen = new QPushButton("ver imagen",ui->tableWidget);
     botonImagen->setIconSize(QSize(50,45));
-    botonImagen->setText("ver");
     botonImagen->setVisible(true);
+    botonImagen->setObjectName(QString("%1").arg(ui->tableWidget->rowCount()));
+    connect(botonImagen, SIGNAL(clicked()),this,SLOT(clickBotonTabla()));
 
 
 
@@ -42,6 +43,30 @@ void seleccionFotos::on_verButton_clicked()
     ui->tableWidget->setItem(fila,TAMANO,new QTableWidgetItem(galerias::getInstance().arrayPrueba[i][3]));
     ui->tableWidget->setItem(fila,DESCRIPCION,new QTableWidgetItem(galerias::getInstance().arrayPrueba[i][4]));
     ui->tableWidget->setCellWidget(i,BOTON,botonImagen);
-    }
 
+    }
+//    for(int i = 0; i <= 2; i++){
+//    QPushButton* botonImagen = new QPushButton();
+//    botonImagen->setParent(ui->tableWidget);
+//    botonImagen->setIconSize(QSize(50,45));
+//    botonImagen->setText("ver");
+//    botonImagen->setVisible(true);
+
+//    int fila = ui->tableWidget->rowCount();
+
+//    ui->tableWidget->insertRow(ui->tableWidget->rowCount());
+//    ui->tableWidget->setItem(fila,NOMBRE,new QTableWidgetItem(galerias::getInstance().arrayPrueba[i][0]));
+//    ui->tableWidget->setItem(fila,ANO,new QTableWidgetItem(galerias::getInstance().arrayPrueba[i][1]));
+//    ui->tableWidget->setItem(fila,AUTOR,new QTableWidgetItem(galerias::getInstance().arrayPrueba[i][2]));
+//    ui->tableWidget->setItem(fila,TAMANO,new QTableWidgetItem(galerias::getInstance().arrayPrueba[i][3]));
+//    ui->tableWidget->setItem(fila,DESCRIPCION,new QTableWidgetItem(galerias::getInstance().arrayPrueba[i][4]));
+//    ui->tableWidget->setCellWidget(i,BOTON,botonImagen);
+
+    //    }
+}
+
+void seleccionFotos::clickBotonTabla()
+{
+    QString imagen = ui->tableWidget->item(1,0)->text();
+    qDebug()<<"click" << imagen;
 }

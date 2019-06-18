@@ -76,7 +76,7 @@ void updateImagen::detectarPalabrasUpdate(QString *arrayOracion)
                 }
             }
             else {
-                qDebug()<<"Error, la metadata que desea modificar no existe";
+                qDebug()<<"Error, la metadata que desea modificar no existe o en el caso del tamano no se puede modificar";
             }
 
         }

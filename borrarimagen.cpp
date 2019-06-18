@@ -53,6 +53,9 @@ void borrarImagen::detectarPlabrasDelete(QString *arrayOracion)
         else if(arrayPalabras[1]=="ano"){
             galerias::getInstance().arrayBorrar[0] = "ano";
         }
+        else if (arrayPalabras[1] == "tamano") {
+            galerias::getInstance().arrayBorrar[0] = "tamano";
+        }
         else if(arrayPalabras[1]=="*") {
             galerias::getInstance().arrayBorrar[0] = "todo";
         }
@@ -81,6 +84,10 @@ void borrarImagen::detectarPlabrasDelete(QString *arrayOracion)
             }
             else if(arrayPalabras[5]=="autor"){
                 galerias::getInstance().arrayBorrar[2] = "autor";
+                galerias::getInstance().arrayBorrar[3] = arrayPalabras[7];
+            }
+            else if(arrayPalabras[5]=="tamano"){
+                galerias::getInstance().arrayBorrar[2] = "tamano";
                 galerias::getInstance().arrayBorrar[3] = arrayPalabras[7];
             }
             else if(arrayPalabras[5]=="descripcion"){
