@@ -20,3 +20,18 @@ void galerias::imprimirInfoGalerias()
     }
 }
 
+QString* galerias::leerArray(string oracionString)
+{
+    QString oracion = QString::fromStdString(oracionString);
+
+    QStringList listaSeparada = oracion.split(",");
+    int i = 0;
+    int tamano = listaSeparada.count();
+    QString *arrayQString = new QString[tamano];
+    foreach(QString palabra, listaSeparada){
+        arrayQString[i] = palabra;
+        i++;
+    }
+
+    return arrayQString;
+}
