@@ -35,6 +35,8 @@ void createGalery::on_botonCrear_clicked()
             fotografia* fotoAgregar = new fotografia();
             fotoAgregar = galerias::getInstance().fotoGlobal;
             nuevaGaleria->agregarImagen(fotoAgregar);
+            fotoAgregar->setNombreGaleria(nombreGaleria);
+            galerias::getInstance().fotoGlobal = fotoAgregar;
 
             galerias::getInstance().listaGalerias->Add(nuevaGaleria);
             qDebug()<<"Se creo la galeria "<<nombreGaleria<<" y se agrego la foto"<<fotoAgregar->getNombre();
@@ -46,6 +48,8 @@ void createGalery::on_botonCrear_clicked()
         fotografia* fotoAgregar = new fotografia();
         fotoAgregar = galerias::getInstance().fotoGlobal;
         nuevaGaleria->agregarImagen(fotoAgregar);
+        fotoAgregar->setNombreGaleria(nombreGaleria);
+        galerias::getInstance().fotoGlobal = fotoAgregar;
         qDebug()<<"Se creo la galeria "<<nombreGaleria<<" ya que no existia ninguna"<<" y se agrego la foto"<<fotoAgregar->getNombre();
         galerias::getInstance().listaGalerias->Add(nuevaGaleria);
         close();
@@ -69,7 +73,8 @@ void createGalery::on_botonGuardar_clicked()
                 flag = true;
                 fotografia* fotoAgregar = new fotografia();
                 fotoAgregar = galerias::getInstance().fotoGlobal;
-
+                fotoAgregar->setNombreGaleria(galeriaTemp->getNombre());
+                galerias::getInstance().fotoGlobal = fotoAgregar;
                 qDebug()<<"Se guardo la imagen "<<fotoAgregar->getNombre()<<" en la galeria "<<galeriaTemp->getNombre();
                 galeriaTemp->agregarImagen(fotoAgregar);
                 close();
