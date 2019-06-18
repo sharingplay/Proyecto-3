@@ -37,7 +37,9 @@ SOURCES += \
     busquedaimagen.cpp \
     borrarimagen.cpp \
     updateimagen.cpp \
-    seleccionfotos.cpp
+    seleccionfotos.cpp \
+    socks.cpp \
+    serializador.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -51,7 +53,9 @@ HEADERS += \
     busquedaimagen.h \
     borrarimagen.h \
     updateimagen.h \
-    seleccionfotos.h
+    seleccionfotos.h \
+    socks.h \
+    serializador.h
 
 FORMS += \
         mainwindow.ui \
