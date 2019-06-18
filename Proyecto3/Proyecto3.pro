@@ -27,11 +27,15 @@ CONFIG += c++11
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-        xml.cpp
+        xml.cpp \
+    socks.cpp \
+    serializador.cpp
 
 HEADERS += \
         mainwindow.h \
-        xml.h
+        xml.h \
+    socks.h \
+    serializador.h
 
 FORMS += \
         mainwindow.ui

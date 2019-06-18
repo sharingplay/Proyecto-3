@@ -54,10 +54,14 @@ OBJECTS_DIR   = ./
 
 SOURCES       = ../Proyecto3/main.cpp \
 		../Proyecto3/mainwindow.cpp \
-		../Proyecto3/xml.cpp moc_mainwindow.cpp
+		../Proyecto3/xml.cpp \
+		../Proyecto3/socks.cpp \
+		../Proyecto3/serializador.cpp moc_mainwindow.cpp
 OBJECTS       = main.o \
 		mainwindow.o \
 		xml.o \
+		socks.o \
+		serializador.o \
 		moc_mainwindow.o
 DIST          = /home/wajo/Qt/5.13.0/gcc_64/mkspecs/features/spec_pre.prf \
 		/home/wajo/Qt/5.13.0/gcc_64/mkspecs/common/unix.conf \
@@ -253,9 +257,13 @@ DIST          = /home/wajo/Qt/5.13.0/gcc_64/mkspecs/features/spec_pre.prf \
 		/home/wajo/Qt/5.13.0/gcc_64/mkspecs/features/yacc.prf \
 		/home/wajo/Qt/5.13.0/gcc_64/mkspecs/features/lex.prf \
 		../Proyecto3/Proyecto3.pro ../Proyecto3/mainwindow.h \
-		../Proyecto3/xml.h ../Proyecto3/main.cpp \
+		../Proyecto3/xml.h \
+		../Proyecto3/socks.h \
+		../Proyecto3/serializador.h ../Proyecto3/main.cpp \
 		../Proyecto3/mainwindow.cpp \
-		../Proyecto3/xml.cpp
+		../Proyecto3/xml.cpp \
+		../Proyecto3/socks.cpp \
+		../Proyecto3/serializador.cpp
 QMAKE_TARGET  = Proyecto3
 DESTDIR       = 
 TARGET        = Proyecto3
@@ -679,8 +687,8 @@ distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents /home/wajo/Qt/5.13.0/gcc_64/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents ../Proyecto3/mainwindow.h ../Proyecto3/xml.h $(DISTDIR)/
-	$(COPY_FILE) --parents ../Proyecto3/main.cpp ../Proyecto3/mainwindow.cpp ../Proyecto3/xml.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../Proyecto3/mainwindow.h ../Proyecto3/xml.h ../Proyecto3/socks.h ../Proyecto3/serializador.h $(DISTDIR)/
+	$(COPY_FILE) --parents ../Proyecto3/main.cpp ../Proyecto3/mainwindow.cpp ../Proyecto3/xml.cpp ../Proyecto3/socks.cpp ../Proyecto3/serializador.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents ../Proyecto3/mainwindow.ui $(DISTDIR)/
 
 
@@ -1471,6 +1479,140 @@ xml.o: ../Proyecto3/xml.cpp ../Proyecto3/xml.h \
 		/home/wajo/Qt/5.13.0/gcc_64/include/QtWidgets/QMessageBox \
 		/home/wajo/Qt/5.13.0/gcc_64/include/QtWidgets/qmessagebox.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o xml.o ../Proyecto3/xml.cpp
+
+socks.o: ../Proyecto3/socks.cpp ../Proyecto3/socks.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/QDebug \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qdebug.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qalgorithms.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qglobal.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qconfig-bootstrapped.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qconfig.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qtcore-config.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qsystemdetection.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qprocessordetection.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qcompilerdetection.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qtypeinfo.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qsysinfo.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qlogging.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qflags.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qatomic.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qbasicatomic.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qatomic_bootstrap.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qgenericatomic.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qatomic_cxx11.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qatomic_msvc.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qglobalstatic.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qmutex.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qnumeric.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qversiontagging.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qhash.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qchar.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qiterator.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qlist.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qrefcount.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qarraydata.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qhashfunctions.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qstring.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qbytearray.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qnamespace.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qstringliteral.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qstringalgorithms.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qstringview.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qstringbuilder.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qpair.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qvector.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qpoint.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qbytearraylist.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qstringlist.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qregexp.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qstringmatcher.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qmap.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qtextstream.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qiodevice.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qobject.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qobjectdefs.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qobjectdefs_impl.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qcoreevent.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qscopedpointer.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qmetatype.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qvarlengtharray.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qcontainerfwd.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qobject_impl.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qlocale.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qvariant.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qshareddata.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qset.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qcontiguouscache.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qsharedpointer.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qsharedpointer_impl.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o socks.o ../Proyecto3/socks.cpp
+
+serializador.o: ../Proyecto3/serializador.cpp ../Proyecto3/serializador.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/QDebug \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qdebug.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qalgorithms.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qglobal.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qconfig-bootstrapped.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qconfig.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qtcore-config.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qsystemdetection.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qprocessordetection.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qcompilerdetection.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qtypeinfo.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qsysinfo.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qlogging.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qflags.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qatomic.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qbasicatomic.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qatomic_bootstrap.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qgenericatomic.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qatomic_cxx11.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qatomic_msvc.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qglobalstatic.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qmutex.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qnumeric.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qversiontagging.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qhash.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qchar.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qiterator.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qlist.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qrefcount.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qarraydata.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qhashfunctions.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qstring.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qbytearray.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qnamespace.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qstringliteral.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qstringalgorithms.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qstringview.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qstringbuilder.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qpair.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qvector.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qpoint.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qbytearraylist.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qstringlist.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qregexp.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qstringmatcher.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qmap.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qtextstream.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qiodevice.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qobject.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qobjectdefs.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qobjectdefs_impl.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qcoreevent.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qscopedpointer.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qmetatype.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qvarlengtharray.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qcontainerfwd.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qobject_impl.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qlocale.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qvariant.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qshareddata.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qset.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qcontiguouscache.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qsharedpointer.h \
+		/home/wajo/Qt/5.13.0/gcc_64/include/QtCore/qsharedpointer_impl.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o serializador.o ../Proyecto3/serializador.cpp
 
 moc_mainwindow.o: moc_mainwindow.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_mainwindow.o moc_mainwindow.cpp

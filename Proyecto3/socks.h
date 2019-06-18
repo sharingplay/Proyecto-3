@@ -1,6 +1,5 @@
-#ifndef SOCKS_H
-#define SOCKS_H
-#include "string"
+#ifndef SOCKET_H
+#define SOCKET_H
 #include <stdio.h>
 #include <sys/socket.h>
 #include <stdlib.h>
@@ -13,20 +12,21 @@
 #include <netinet/in.h>
 #include <arpa/inet.h>
 #include <unistd.h>
+#include <string.h>
 #include <bits/stdc++.h>
 #include "QDebug"
 using namespace std;
 
+
 class socks
 {
 public:
-    socks();
     static socks & getInstance(){
         static socks instance;
         return instance;
     }
-    
+    socks();
     string escuchaEnvia(int puerto, string mensaje);
 };
 
-#endif // SOCKS_H
+#endif // SOCKET_H

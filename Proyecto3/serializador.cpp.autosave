@@ -1,0 +1,23 @@
+#include "serializador.h"
+
+serializador::serializador()
+{
+
+}
+string serializador::serializarMetadata(string meta){
+    const char* json = "{\"meta\":\"\"}";
+     Document d;
+     d.Parse(json);
+     d["meta"].SetString(meta.c_str(),sizeof(char)*meta.length());
+     StringBuffer buffer;
+     Writer<StringBuffer> writer(buffer);
+     d.Accept(writer);
+     return buffer.GetString();
+}
+void serializador::deserializarMeta(string json, string* nombre, string* autor, string *creacion, string *ano, string *tamano, string *foto_b64){
+    Document d;
+    d.Parse(json.c_str());
+    *nombre = d["nombre"].GetString();
+    *autor = d["autor"].GetString();
+    *creacion = d["creacion"].GetString();
+}

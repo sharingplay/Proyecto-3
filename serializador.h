@@ -2,10 +2,10 @@
 #define SERIALIZADOR_H
 
 
-class serializador
+class Serializador
 {
 public:
-    serializador();
+    Serializador();
 };
 
 #endif // SERIALIZADOR_H

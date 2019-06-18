@@ -1,0 +1,17 @@
+#ifndef SERIALIZADOR_H
+#define SERIALIZADOR_H
+#include "QDebug"
+#include "rapidjson/document.h"
+#include "rapidjson/writer.h"
+#include "rapidjson/stringbuffer.h"
+using namespace std;
+using namespace rapidjson; 
+
+class serializador
+{
+public:
+    serializador();
+    string serializarMetadata(string metadata);
+};
+
+#endif // SERIALIZADOR_H
