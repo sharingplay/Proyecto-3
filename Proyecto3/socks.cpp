@@ -1,5 +1,7 @@
 #include "socks.h"
-
+#include "socks.h"
+#include "xml.h"
+#include "serializador.h"
 socks::socks()
 {
 
@@ -10,8 +12,6 @@ string socks::escuchaEnvia(int puerto,string mensaje)
     struct sockaddr_in address;
     int opt = 1;
     int addrlen = sizeof(address);
-    char hello[mensaje.length()+1];
-    strcpy(hello,mensaje.c_str());
     char buffer[1024] = {0};
 
     // Creating socket file descriptor
@@ -52,7 +52,47 @@ string socks::escuchaEnvia(int puerto,string mensaje)
     }
     valread = read( new_socket , buffer, 1024);
     string message = buffer;
+    string nombre;
+    string autor;
+    string creacion;
+    string descripcion;
+    string tamano;
+    string galeria;
+    string foto_b64;
+    int id;
+    string recibe = socks::getInstance().escuchaEnvia(8080,"");
+    serializador::getInstance().deserializarMeta(recibe, &nombre, &autor, &creacion, &descripcion, &tamano, &galeria,&foto_b64,&id);
+    if (id == 1){
+        if(creacion == "nombre"){
+          mensaje = XML::getInstance().buscarNombre(descripcion);
+        }
+        if(creacion == "autor"){
+            mensaje =XML::getInstance().buscarAutor(descripcion);
+        }
+        if(creacion == "ano"){
+            mensaje = XML::getInstance().buscarCreacion(descripcion);
+        }
+        if(creacion == "descripcion"){
+            mensaje = XML::getInstance().buscarDescripcion(descripcion);
+        }
+        if(creacion == "tamano"){
+            mensaje = XML::getInstance().buscarTamano(descripcion);
+        }
+    }
+    if (id ==2){
+        XML::getInstance().eliminar(nombre);
+    }
+    if(id==3){
+        XML::getInstance().update(autor,nombre,creacion,descripcion);
+    }
+    if(id ==4){
+        XML::getInstance().agregarImagen(galeria,foto_b64,nombre,autor,creacion,tamano,descripcion);
+    }
+    mensaje = serializador::getInstance().serializarMetadata(mensaje);
+    char hello[mensaje.length()+1];
+    strcpy(hello,mensaje.c_str());
     send(new_socket , hello , strlen(hello) , 0 );
     close(server_fd);
     return message;
 }
+
