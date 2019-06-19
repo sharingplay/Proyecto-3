@@ -13,6 +13,10 @@ using namespace std;
 class XML
 {
 public:
+    static XML & getInstance(){
+        static XML instance;
+        return instance;
+    }
     XML();
     string readXML();//listo
     void writeXML(string datos);//listo

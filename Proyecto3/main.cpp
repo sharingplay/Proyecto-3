@@ -6,38 +6,10 @@
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    XML* prueba= new XML();
-   prueba->writeXML("prueba");
-   string nombre;
-   string autor;
-   string creacion;
-   string descripcion;
-   string tamano;
-   string galeria;
-   string foto_b64;
-   int id;
-   string recibe = socks::getInstance().escuchaEnvia(8080,"");
-   serializador::getInstance().deserializarMeta(recibe, &nombre, &autor, &creacion, &descripcion, &tamano, &galeria,&foto_b64,&id);
-   if (id == 1){
-       if(creacion == "nombre"){
-          prueba->buscarNombre(descripcion);
-       }
-       if(creacion == "autor"){
-           prueba->buscarAutor(descripcion);
-       }
-       if(creacion == "ano"){
-           prueba->buscarCreacion(descripcion);
-       }
-       if(creacion == "descripcion"){
-           prueba->buscarDescripcion(descripcion);
-       }
-       if(creacion == "tamano"){
-            prueba->buscarTamano(descripcion);
-       }
-   }
-   if (id ==2){
-       prueba->eliminar(nombre);
-   }
+    while (true){
+         socks::getInstance().escuchaEnvia(8080,"");
+    }
+
 //    prueba->readXML();
 //    prueba->newGallery("prueba");
 //    prueba->agregarImagen("prueba","68597","rosa","pablo","1985","15x15","holaaaa");

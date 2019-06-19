@@ -62,6 +62,7 @@ string socks::escuchaEnvia(int puerto,string mensaje)
     int id;
     string recibe = socks::getInstance().escuchaEnvia(8080,"");
     serializador::getInstance().deserializarMeta(recibe, &nombre, &autor, &creacion, &descripcion, &tamano, &galeria,&foto_b64,&id);
+    qDebug()<<"PASOOO";
     if (id == 1){
         if(creacion == "nombre"){
           mensaje = XML::getInstance().buscarNombre(descripcion);
@@ -83,7 +84,7 @@ string socks::escuchaEnvia(int puerto,string mensaje)
         XML::getInstance().eliminar(nombre);
     }
     if(id==3){
-        XML::getInstance().update(autor,nombre,creacion,descripcion);
+        //XML::getInstance().update(autor,nombre,creacion,descripcion);
     }
     if(id ==4){
         XML::getInstance().agregarImagen(galeria,foto_b64,nombre,autor,creacion,tamano,descripcion);
